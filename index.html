@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TechShop</h1>
+        <p>Інтернет-магазин техніки</p>
+
+        <!-- Кнопка-кошик для відкриття модального вікна -->
+        <button class="cart btn-cart">
+            🛒 Кошик: <span class="cart-counter">0</span>
+        </button>
+    </header>
+
+    <main>
+        <!-- Зона улюблених товарів для Drag-and-Drop -->
+        <div class="favorites-zone" id="favoritesZone">
+            <p>Перетягніть сюди товари в Улюблене</p>
+        </div>
+
+        <h2>Наші товари</h2>
+        <!-- Головний контейнер сітки товарів -->
+        <div class="products-grid"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 TechShop</p>
+    </footer>
+
+    <!-- Структура модального вікна кошика -->
+    <div class="modal-overlay hidden" id="cartOverlay">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h2>Ваш Кошик</h2>
+                <button class="close-btn" id="closeCartBtn">&times;</button>
+            </div>
+
+            <!-- Контейнер для товарів у кошику -->
+            <div class="cart-items" id="cartItemsContainer">
+                <p>Кошик порожній.</p>
+            </div>
+
+            <div class="modal-footer">
+                <h3>Разом: $<span id="cartTotalSum">0</span></h3>
+                <a href="checkout.html" class="btn btn-primary" id="checkoutBtn">Оформити замовлення</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Підключення основного JS-скрипта -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
